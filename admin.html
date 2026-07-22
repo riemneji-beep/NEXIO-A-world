@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>EastVerse Admin 👑</title>
+
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+
+body{
+
+margin:0;
+color:white;
+
+background:
+radial-gradient(circle,#26104d,#050008);
+
+}
+
+
+header{
+
+padding:20px;
+
+text-align:center;
+
+font-size:30px;
+
+background:rgba(255,255,255,.1);
+
+}
+
+
+.container{
+
+padding:20px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:25px;
+
+margin-bottom:20px;
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+input,textarea{
+
+width:90%;
+
+padding:12px;
+
+border-radius:20px;
+
+border:0;
+
+margin:8px;
+
+}
+
+
+
+button{
+
+background:#a855f7;
+
+border:0;
+
+color:white;
+
+padding:12px 20px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+
+
+
+.stat{
+
+display:inline-block;
+
+background:rgba(255,255,255,.15);
+
+padding:20px;
+
+border-radius:20px;
+
+margin:5px;
+
+}
+
+
+
+.item{
+
+background:rgba(255,255,255,.1);
+
+padding:15px;
+
+border-radius:15px;
+
+margin:10px;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<header>
+
+👑 EastVerse Admin
+
+</header>
+
+
+
+
+<div class="container">
+
+
+
+
+
+<div class="card">
+
+<h2>
+📊 إحصائيات الموقع
+</h2>
+
+
+<div class="stat">
+
+👥 المستخدمون
+
+<br>
+
+25,430
+
+</div>
+
+
+<div class="stat">
+
+📝 المنشورات
+
+<br>
+
+84,200
+
+</div>
+
+
+<div class="stat">
+
+💎 الجواهر الموزعة
+
+<br>
+
+2M
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🎬 إضافة مسلسل
+</h2>
+
+
+<input placeholder="اسم المسلسل">
+
+
+<input placeholder="الدولة">
+
+
+<input placeholder="التقييم">
+
+
+<textarea placeholder="الوصف"></textarea>
+
+
+<br>
+
+<button onclick="addDrama()">
+
+إضافة مسلسل
+
+</button>
+
+
+<p id="dramaResult"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🎤 إضافة فرقة
+</h2>
+
+
+<input placeholder="اسم الفرقة">
+
+
+<input placeholder="الشركة">
+
+
+<input placeholder="تاريخ الترسيم">
+
+
+<button>
+
+إضافة الفرقة
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+📰 نشر خبر
+</h2>
+
+
+<textarea placeholder="اكتب الخبر"></textarea>
+
+
+<br>
+
+
+<button>
+
+نشر
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🚨 البلاغات
+
+</h2>
+
+
+<div class="item">
+
+👤 User123
+
+<br>
+
+بلاغ: تعليق مسيء
+
+<br>
+
+<button>
+
+مراجعة
+
+</button>
+
+</div>
+
+
+
+
+<div class="item">
+
+👤 Fan2026
+
+<br>
+
+بلاغ: محتوى مخالف
+
+<br>
+
+<button>
+
+مراجعة
+
+</button>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+⭐ إدارة المستخدمين
+
+</h2>
+
+
+<div class="item">
+
+👤 Riem
+
+<br>
+
+🔴 كوكب المريخ
+
+<br>
+
+💎 500
+
+<br>
+
+<button>
+
+منح شارة
+
+</button>
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+function addDrama(){
+
+document.getElementById("dramaResult")
+.innerHTML=
+"✅ تم إضافة المسلسل بنجاح";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
