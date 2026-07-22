@@ -380,3 +380,47 @@ document.getElementById("message")
 </body>
 
 </html>
+<div class="card">
+
+<h2>🌌 أصوات الكواكب</h2>
+
+<p>
+شارك رأيك الحقيقي عن هذا المسلسل.
+</p>
+
+<select id="userRating">
+
+<option value="5">⭐⭐⭐⭐⭐ (5)</option>
+<option value="4">⭐⭐⭐⭐ (4)</option>
+<option value="3">⭐⭐⭐ (3)</option>
+<option value="2">⭐⭐ (2)</option>
+<option value="1">⭐ (1)</option>
+
+</select>
+
+<br><br>
+
+<textarea
+id="userReview"
+placeholder="اكتب رأيك هنا..."
+></textarea>
+
+<br><br>
+
+<button onclick="publishReview()">
+🚀 نشر الرأي
+</button>
+
+<p id="reviewMessage"></p>
+
+<hr>
+
+<h3>💬 آراء المستخدمين</h3>
+
+<div id="reviewsContainer">
+
+جارٍ تحميل الآراء...
+
+</div>
+
+</div>
