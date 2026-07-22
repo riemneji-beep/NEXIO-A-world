@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Explore - EastVerse 🌌</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+margin:0;
+color:white;
+
+background:
+radial-gradient(circle,#24104d,#050008);
+
+}
+
+
+header{
+
+padding:20px;
+font-size:30px;
+text-align:center;
+
+background:rgba(255,255,255,.1);
+
+}
+
+
+
+.container{
+
+padding:20px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:25px;
+
+margin-bottom:20px;
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+input{
+
+width:90%;
+
+padding:15px;
+
+border-radius:25px;
+
+border:0;
+
+}
+
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+}
+
+
+
+.box{
+
+background:rgba(255,255,255,.15);
+
+padding:15px;
+
+border-radius:20px;
+
+}
+
+
+
+.poster{
+
+height:120px;
+
+border-radius:15px;
+
+background:
+linear-gradient(45deg,#ff4d6d,#7b2cbf);
+
+}
+
+
+
+button{
+
+padding:12px 20px;
+
+border:0;
+
+border-radius:20px;
+
+background:#a855f7;
+
+color:white;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+🌌 Explore EastVerse
+
+</header>
+
+
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+
+<h2>
+🔍 البحث
+</h2>
+
+
+<input placeholder="ابحث عن مسلسل، فرقة، ممثل...">
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🎬 مسلسلات ترند
+</h2>
+
+
+
+<div class="grid">
+
+
+
+<div class="box">
+
+<div class="poster"></div>
+
+<br>
+
+Hidden Love
+
+<br>
+
+⭐ 9.2
+
+</div>
+
+
+
+
+<div class="box">
+
+<div class="poster"></div>
+
+<br>
+
+When I Fly Towards You
+
+<br>
+
+⭐ 9.0
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🎤 فرق جديدة
+</h2>
+
+
+<div class="grid">
+
+
+<div class="box">
+
+🔥 New Group
+
+<br>
+
+ترسيم 2026
+
+</div>
+
+
+
+<div class="box">
+
+✨ Rising Stars
+
+<br>
+
+قبل الشهرة
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+📰 أخبار اليوم
+</h2>
+
+
+
+<div class="box">
+
+🎬 ممثل جديد أعلن عن مسلسل قادم
+
+</div>
+
+
+<br>
+
+
+<div class="box">
+
+🎤 فرقة أعلنت عن كومباك جديد
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🤖 EastVerse AI
+
+</h2>
+
+
+<p>
+
+اكتب طلبك:
+
+</p>
+
+
+<input id="question"
+placeholder="مثلا: اقترح لي مسلسل رومانسي">
+
+
+
+<br><br>
+
+
+<button onclick="askAI()">
+
+إرسال 🚀
+
+</button>
+
+
+
+<p id="answer">
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+function askAI(){
+
+
+let q=document.getElementById("question").value;
+
+
+let answer="";
+
+
+if(q.includes("رومانسي")){
+
+answer=
+"💗 أنصحك بـ Hidden Love و When I Fly Towards You";
+
+
+}
+
+else if(q.includes("كيبوب")){
+
+
+answer=
+"🎤 جرب اكتشاف فرق جديدة ذات أداء قوي";
+
+
+}
+
+else{
+
+
+answer=
+"🤖 سأحلل طلبك وأعطيك اقتراحات مناسبة";
+
+
+}
+
+
+
+document.getElementById("answer")
+.innerHTML=answer;
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
