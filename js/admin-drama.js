@@ -123,3 +123,120 @@ document.getElementById("result")
 
 
 }
+import { initializeApp }
+
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+
+import {
+
+getFirestore,
+
+collection,
+
+addDoc
+
+}
+
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+
+
+const firebaseConfig={
+
+
+apiKey:"ضع المفتاح هنا",
+
+authDomain:"ضع الدومين هنا",
+
+projectId:"NEXIO-A-world"
+
+
+};
+
+
+
+const app =
+initializeApp(firebaseConfig);
+
+
+
+const db =
+getFirestore(app);
+
+
+
+
+
+window.addContent = async function(){
+
+
+let type =
+document.getElementById("type").value;
+
+
+let name =
+document.getElementById("name").value;
+
+
+let country =
+document.getElementById("country").value;
+
+
+let company =
+document.getElementById("company").value;
+
+
+let image =
+document.getElementById("image").value;
+
+
+let year =
+document.getElementById("year").value;
+
+
+let description =
+document.getElementById("description").value;
+
+
+
+
+await addDoc(
+
+collection(db,type),
+
+{
+
+
+name:name,
+
+country:country,
+
+company:company,
+
+image:image,
+
+year:year,
+
+description:description,
+
+createdAt:new Date()
+
+}
+
+
+);
+
+
+
+
+
+document.getElementById("message")
+.innerHTML=
+
+"✅ تمت إضافة المحتوى بنجاح";
+
+
+
+}
