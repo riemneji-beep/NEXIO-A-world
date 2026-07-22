@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<title>NEXIO-A-world | Drama 🎬</title>
+
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+
+body{
+
+margin:0;
+
+color:white;
+
+background:
+radial-gradient(circle,#42106b,#050008);
+
+}
+
+
+header{
+
+padding:20px;
+
+font-size:30px;
+
+text-align:center;
+
+background:rgba(255,255,255,.1);
+
+}
+
+
+
+.container{
+
+max-width:700px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+
+
+.search{
+
+width:100%;
+
+padding:15px;
+
+border-radius:25px;
+
+border:0;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:25px;
+
+margin-top:20px;
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+.poster{
+
+height:180px;
+
+border-radius:20px;
+
+background:
+linear-gradient(45deg,#ff4d6d,#7b2cbf);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:50px;
+
+}
+
+
+
+.tag{
+
+display:inline-block;
+
+background:#a855f7;
+
+padding:8px 15px;
+
+border-radius:20px;
+
+margin:5px;
+
+}
+
+
+
+button{
+
+background:#a855f7;
+
+color:white;
+
+border:0;
+
+padding:12px 20px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+
+
+
+textarea{
+
+width:100%;
+
+border-radius:20px;
+
+padding:15px;
+
+}
+
+
+
+.star{
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<header>
+
+🎬 NEXIO-A-world Drama
+
+</header>
+
+
+
+<div class="container">
+
+
+
+<input class="search"
+placeholder="🔍 ابحث عن مسلسل...">
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="poster">
+🎬
+</div>
+
+
+
+<h2>
+Hidden Love
+</h2>
+
+
+<p>
+🇨🇳 صيني
+</p>
+
+
+<div class="tag">
+💗 رومانس
+</div>
+
+
+<div class="tag">
+🏫 مدرسي
+</div>
+
+
+
+<h3>
+⭐ تقييم المستخدمين
+</h3>
+
+
+<div id="stars">
+
+<span class="star" onclick="rate(1)">☆</span>
+
+<span class="star" onclick="rate(2)">☆</span>
+
+<span class="star" onclick="rate(3)">☆</span>
+
+<span class="star" onclick="rate(4)">☆</span>
+
+<span class="star" onclick="rate(5)">☆</span>
+
+
+</div>
+
+
+
+<p id="rating">
+
+لم يتم التقييم
+
+</p>
+
+
+
+<button onclick="favorite()">
+
+❤️ إضافة للمفضلة
+
+</button>
+
+
+
+<h3>
+📝 اكتب رأيك
+</h3>
+
+
+<textarea id="review"
+placeholder="اكتب مراجعتك..."></textarea>
+
+
+<br><br>
+
+
+<button onclick="sendReview()">
+
+نشر المراجعة 🚀
+
+</button>
+
+
+<p id="result">
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🔥 مسلسلات مقترحة لك
+</h2>
+
+
+<p>
+✨ When I Fly Towards You
+</p>
+
+
+<p>
+🌙 Love Between Fairy and Devil
+</p>
+
+
+<p>
+💎 The Untamed
+</p>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+let currentRating=0;
+
+
+
+function rate(number){
+
+
+currentRating=number;
+
+
+
+let stars="";
+
+
+for(let i=1;i<=5;i++){
+
+
+if(i<=number){
+
+stars+="★";
+
+}
+
+else{
+
+stars+="☆";
+
+}
+
+
+}
+
+
+document.getElementById("stars")
+.innerHTML=stars;
+
+
+document.getElementById("rating")
+.innerHTML=
+"تقييمك: "+number+"/5 ⭐";
+
+
+}
+
+
+
+
+function favorite(){
+
+
+alert(
+"❤️ تمت إضافة المسلسل للمفضلة"
+);
+
+
+}
+
+
+
+
+function sendReview(){
+
+
+let text=
+document.getElementById("review").value;
+
+
+
+if(text==""){
+
+alert("اكتب مراجعة أولاً");
+
+return;
+
+}
+
+
+
+document.getElementById("result")
+.innerHTML=
+"✅ تم نشر مراجعتك";
+
+
+}
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
