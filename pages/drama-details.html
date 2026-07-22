@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>NEXIO-A-world | Drama Details 🎬</title>
+
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+
+body{
+
+margin:0;
+
+color:white;
+
+background:
+radial-gradient(circle,#4b176d,#050008);
+
+}
+
+
+.container{
+
+max-width:600px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:25px;
+
+border-radius:25px;
+
+margin-bottom:20px;
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+.poster{
+
+height:250px;
+
+border-radius:25px;
+
+background:
+linear-gradient(45deg,#ff5f6d,#7b2cbf);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:80px;
+
+}
+
+
+
+.tag{
+
+display:inline-block;
+
+background:#a855f7;
+
+padding:8px 15px;
+
+border-radius:20px;
+
+margin:5px;
+
+}
+
+
+
+button{
+
+background:#a855f7;
+
+border:0;
+
+color:white;
+
+padding:12px 20px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+
+
+
+textarea{
+
+width:100%;
+
+height:100px;
+
+border-radius:20px;
+
+padding:15px;
+
+}
+
+
+
+.review{
+
+background:rgba(255,255,255,.1);
+
+padding:15px;
+
+border-radius:20px;
+
+margin-top:10px;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+
+<div class="poster">
+
+🎬
+
+</div>
+
+
+
+<h1 id="title">
+
+Hidden Love
+
+</h1>
+
+
+<p>
+🇨🇳 مسلسل صيني
+</p>
+
+
+<div class="tag">
+💗 رومانس
+</div>
+
+
+<div class="tag">
+🏫 مدرسي
+</div>
+
+
+<h2>
+
+⭐ 9.2/10
+
+</h2>
+
+
+
+<button>
+
+❤️ إضافة للمفضلة
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+📖 القصة
+</h2>
+
+
+<p>
+
+فتاة تقع في حب شخص تعرفه منذ الصغر،
+وتبدأ قصة رومانسية مليئة بالمواقف الجميلة.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🎭 الشخصيات
+</h2>
+
+
+<p>
+👤 Sang Zhi
+</p>
+
+
+<p>
+👤 Duan Jiaxu
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+📝 اكتب رأيك
+</h2>
+
+
+<textarea id="review"
+placeholder="رأيك عن المسلسل...">
+
+</textarea>
+
+
+<br><br>
+
+
+<button onclick="sendReview()">
+
+نشر
+
+</button>
+
+
+<p id="message"></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+💬 آراء المشاهدين
+</h2>
+
+
+<div class="review">
+
+👤 Lina
+
+<br>
+
+⭐ 5/5
+
+<br><br>
+
+مسلسل لطيف وأنصح به 💗
+
+</div>
+
+
+
+<div class="review">
+
+👤 Ahmed
+
+<br>
+
+⭐ 4/5
+
+<br><br>
+
+القصة جميلة لكن النهاية كان ممكن تكون أفضل.
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+function sendReview(){
+
+
+let text =
+document.getElementById("review").value;
+
+
+
+if(text==""){
+
+alert("اكتب رأيك");
+
+return;
+
+}
+
+
+document.getElementById("message")
+.innerHTML=
+"✅ تم إرسال مراجعتك";
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
