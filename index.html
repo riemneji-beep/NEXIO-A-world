@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>EastVerse 🌌</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    color:white;
+    background:
+    radial-gradient(circle at top,#5429a6,#090014);
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    padding:30px;
+    text-align:center;
+}
+
+.logo{
+    font-size:45px;
+    margin-top:20px;
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+    padding:25px;
+    border-radius:25px;
+    margin-top:20px;
+    backdrop-filter:blur(15px);
+}
+
+input,select{
+    width:90%;
+    padding:12px;
+    margin:10px;
+    border-radius:20px;
+    border:none;
+}
+
+button{
+    background:#a855f7;
+    color:white;
+    border:0;
+    padding:13px 25px;
+    border-radius:25px;
+    cursor:pointer;
+    margin:10px;
+}
+
+.option{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    padding:12px;
+    margin:5px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.option.active{
+    background:#ffcc00;
+    color:black;
+}
+
+.hidden{
+    display:none;
+}
+
+.planet{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    margin:20px auto;
+    background:red;
+    box-shadow:0 0 50px red;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+🌌 EastVerse
+</div>
+
+
+<div class="card" id="step1">
+
+<h2>أنشئ حسابك ✨</h2>
+
+<input id="name" placeholder="اسم المستخدم">
+
+<select id="country">
+<option>🇹🇳 تونس</option>
+<option>🇸🇦 السعودية</option>
+<option>🇪🇬 مصر</option>
+<option>🇲🇦 المغرب</option>
+<option>🇩🇿 الجزائر</option>
+<option>🇦🇪 الإمارات</option>
+</select>
+
+<button onclick="nextStep(2)">
+التالي 🚀
+</button>
+
+</div>
+
+
+
+
+<div class="card hidden" id="step2">
+
+<h2>🎬 ماذا تحب في المسلسلات؟</h2>
+
+<div class="option" onclick="choose(this,'romance')">
+💗 رومانسية
+</div>
+
+<div class="option" onclick="choose(this,'action')">
+🔥 أكشن
+</div>
+
+<div class="option" onclick="choose(this,'fantasy')">
+✨ فانتازيا
+</div>
+
+<div class="option" onclick="choose(this,'sad')">
+😭 دراما حزينة
+</div>
+
+
+<br>
+
+<button onclick="nextStep(3)">
+التالي
+</button>
+
+</div>
+
+
+
+
+
+<div class="card hidden" id="step3">
+
+<h2>🎤 ماذا تحب في الموسيقى؟</h2>
+
+<div class="option" onclick="choose(this,'performance')">
+🔥 أداء قوي
+</div>
+
+<div class="option" onclick="choose(this,'rap')">
+🎤 راب
+</div>
+
+<div class="option" onclick="choose(this,'visual')">
+✨ فيجوال
+</div>
+
+
+<br>
+
+<button onclick="createPlanet()">
+اكتشف كوكبك 🪐
+</button>
+
+</div>
+
+
+
+
+
+<div class="card hidden" id="result">
+
+<h2>✨ تم اكتشاف كوكبك</h2>
+
+<div class="planet" id="planet"></div>
+
+<h2 id="planetName"></h2>
+
+<p id="description"></p>
+
+<h3>
+💎 الجائزة: 100 جوهرة
+</h3>
+
+<button>
+دخول EastVerse 🚀
+</button>
+
+</div>
+
+
+</div>
+
+
+
+
+<script>
+
+let choices=[];
+
+
+function nextStep(number){
+
+document.querySelectorAll(".card")
+.forEach(x=>x.classList.add("hidden"));
+
+document.getElementById("step"+number)
+.classList.remove("hidden");
+
+}
+
+
+
+function choose(element,value){
+
+element.classList.toggle("active");
+
+choices.push(value);
+
+}
+
+
+
+function createPlanet(){
+
+document.querySelectorAll(".card")
+.forEach(x=>x.classList.add("hidden"));
+
+
+let planet="";
+
+let desc="";
+
+
+if(choices.includes("romance")){
+planet="💚 كوكب الزمرد";
+desc="أنت تحب القصص الدافئة والرومانسية والجمال.";
+document.getElementById("planet").style.background="green";
+}
+
+
+else if(choices.includes("action")){
+planet="🔴 كوكب المريخ";
+desc="أنت تحب القوة والحماس والشخصيات القوية.";
+document.getElementById("planet").style.background="red";
+}
+
+
+else if(choices.includes("fantasy")){
+planet="🌙 كوكب القمر";
+desc="أنت تحب الخيال والعوالم الغامضة.";
+document.getElementById("planet").style.background="purple";
+}
+
+
+else{
+planet="☀️ كوكب الشمس";
+desc="أنت تحب النجومية والطاقة العالية.";
+document.getElementById("planet").style.background="orange";
+}
+
+
+document.getElementById("planetName").innerHTML=planet;
+
+document.getElementById("description").innerHTML=desc;
+
+
+document.getElementById("result")
+.classList.remove("hidden");
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
