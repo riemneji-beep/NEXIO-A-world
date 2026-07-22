@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<title>EastVerse Community 🌌</title>
+
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+
+body{
+
+margin:0;
+color:white;
+
+background:
+radial-gradient(circle,#30105c,#050009);
+
+}
+
+
+header{
+
+padding:20px;
+
+font-size:28px;
+
+text-align:center;
+
+background:rgba(255,255,255,.1);
+
+}
+
+
+
+.container{
+
+padding:20px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:25px;
+
+margin-bottom:20px;
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+textarea{
+
+width:100%;
+
+height:100px;
+
+border-radius:20px;
+
+padding:15px;
+
+}
+
+
+
+button{
+
+background:#a855f7;
+
+color:white;
+
+border:0;
+
+padding:12px 20px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+
+
+
+.post{
+
+background:rgba(255,255,255,.15);
+
+padding:15px;
+
+border-radius:20px;
+
+margin-top:15px;
+
+}
+
+
+
+.comment{
+
+background:rgba(0,0,0,.2);
+
+padding:10px;
+
+border-radius:15px;
+
+margin-top:10px;
+
+}
+
+
+.group{
+
+display:inline-block;
+
+background:rgba(255,255,255,.15);
+
+padding:15px;
+
+border-radius:20px;
+
+margin:5px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+🌌 EastVerse Community
+
+</header>
+
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+
+<h2>
+✨ اكتب منشورك
+</h2>
+
+
+<textarea id="text"
+placeholder="شارك رأيك عن مسلسل أو فرقة...">
+
+</textarea>
+
+
+<br><br>
+
+
+<button onclick="addPost()">
+
+نشر 🚀
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🔥 آخر المنشورات
+</h2>
+
+
+<div id="posts">
+
+
+<div class="post">
+
+👤 Lina
+
+<br><br>
+
+خلصت مسلسل جديد 😭✨
+النهاية كانت رائعة!
+
+<br><br>
+
+❤️ <span>25</span>
+
+<button onclick="like(this)">
+إعجاب
+</button>
+
+
+<div class="comment">
+
+💬 Sara:
+أتفق معك!
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🌌 المجرات (القروبات)
+</h2>
+
+
+<div class="group">
+
+🎬 C-Drama Galaxy
+
+<br>
+
+12000 عضو
+
+</div>
+
+
+
+<div class="group">
+
+🎤 K-pop Universe
+
+<br>
+
+25000 عضو
+
+</div>
+
+
+
+
+<div class="group">
+
+🐉 New Groups Hunters
+
+<br>
+
+5000 عضو
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+💬 المحادثات
+</h2>
+
+
+<div class="post">
+
+👤 Riem
+
+<br>
+
+هل شاهدت المسلسل الجديد؟
+
+
+<br><br>
+
+[ فتح المحادثة ]
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+
+function addPost(){
+
+
+let text=document.getElementById("text").value;
+
+
+if(text==""){
+
+return;
+
+}
+
+
+
+let post=
+
+`
+<div class="post">
+
+👤 أنت
+
+<br><br>
+
+${text}
+
+<br><br>
+
+❤️ 0
+
+<button onclick="like(this)">
+إعجاب
+</button>
+
+
+</div>
+`;
+
+
+document.getElementById("posts")
+.innerHTML+=post;
+
+
+
+document.getElementById("text").value="";
+
+
+}
+
+
+
+
+function like(button){
+
+
+button.parentElement
+.querySelector("span")
+.innerHTML++;
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
