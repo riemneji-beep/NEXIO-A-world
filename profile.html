@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>NEXIO-A-world 🌌</title>
+
+
+<style>
+
+body{
+
+margin:0;
+font-family:Arial;
+color:white;
+
+background:
+radial-gradient(circle,#4b1d80,#050008);
+
+}
+
+
+.container{
+
+max-width:500px;
+margin:auto;
+padding:25px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,0.12);
+
+padding:25px;
+
+border-radius:25px;
+
+margin-bottom:20px;
+
+backdrop-filter:blur(15px);
+
+text-align:center;
+
+}
+
+
+
+.avatar{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:#8b5cf6;
+
+margin:auto;
+
+font-size:50px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+input,select{
+
+width:90%;
+
+padding:12px;
+
+margin:8px;
+
+border-radius:20px;
+
+border:none;
+
+}
+
+
+
+button{
+
+background:#a855f7;
+
+color:white;
+
+border:0;
+
+padding:12px 25px;
+
+border-radius:25px;
+
+cursor:pointer;
+
+}
+
+
+
+.planet{
+
+font-size:60px;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h1>
+🌌 NEXIO-A-world
+</h1>
+
+
+<h2>
+تخصيص ملفك 🪐
+</h2>
+
+
+<div class="avatar">
+👤
+</div>
+
+
+<br>
+
+
+<input id="username"
+placeholder="اسم المستخدم">
+
+
+<select id="country">
+
+<option>🇹🇳 تونس</option>
+
+<option>🇸🇦 السعودية</option>
+
+<option>🇪🇬 مصر</option>
+
+<option>🇲🇦 المغرب</option>
+
+<option>🇩🇿 الجزائر</option>
+
+<option>🇦🇪 الإمارات</option>
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🪐 اختر كوكبك
+</h2>
+
+
+<div class="planet" id="planet">
+🌍
+</div>
+
+
+<button onclick="planet('mars')">
+🔴 المريخ
+</button>
+
+
+<button onclick="planet('emerald')">
+💚 الزمرد
+</button>
+
+
+<button onclick="planet('moon')">
+🌙 القمر
+</button>
+
+
+<button onclick="planet('sun')">
+☀️ الشمس
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🎬 اهتماماتك
+</h2>
+
+
+<button onclick="add('رومانس')">
+💗 رومانس
+</button>
+
+
+<button onclick="add('اكشن')">
+🔥 أكشن
+</button>
+
+
+<button onclick="add('فانتازيا')">
+✨ فانتازيا
+</button>
+
+
+<button onclick="add('كيبوب')">
+🎤 كيبوب
+</button>
+
+
+<p id="likes">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+💎 حسابك
+
+</h2>
+
+
+<p>
+⭐ المستوى: 1
+</p>
+
+
+<p>
+💎 الجواهر: 100
+</p>
+
+
+<p>
+✨ الخبرة: 0 XP
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<button onclick="save()">
+
+حفظ الملف 🚀
+
+</button>
+
+
+<p id="result">
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+let myPlanet="🌍";
+
+let interests=[];
+
+
+
+function planet(type){
+
+
+if(type=="mars"){
+
+myPlanet="🔴 كوكب المريخ";
+
+}
+
+
+if(type=="emerald"){
+
+myPlanet="💚 كوكب الزمرد";
+
+}
+
+
+if(type=="moon"){
+
+myPlanet="🌙 كوكب القمر";
+
+}
+
+
+if(type=="sun"){
+
+myPlanet="☀️ كوكب الشمس";
+
+}
+
+
+document.getElementById("planet")
+.innerHTML=myPlanet;
+
+
+}
+
+
+
+
+
+function add(item){
+
+interests.push(item);
+
+
+document.getElementById("likes")
+.innerHTML=
+"اهتماماتك: "+interests.join(" - ");
+
+}
+
+
+
+
+function save(){
+
+
+let name=
+document.getElementById("username").value;
+
+
+
+document.getElementById("result")
+.innerHTML=
+
+"🎉 تم حفظ ملف "
++name+
+"<br>كوكبك: "
++myPlanet;
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
