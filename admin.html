@@ -142,7 +142,225 @@ margin:10px;
 
 </header>
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+
+<meta charset="UTF-8">
+
+<title>NEXIO-A-world Admin 👑</title>
+
+
+<style>
+
+body{
+
+margin:0;
+
+font-family:Arial;
+
+color:white;
+
+background:
+radial-gradient(circle,#42136b,#050008);
+
+}
+
+
+.container{
+
+max-width:600px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:25px;
+
+border-radius:25px;
+
+margin-bottom:20px;
+
+}
+
+
+
+input,textarea,select{
+
+width:90%;
+
+padding:12px;
+
+margin:8px;
+
+border-radius:20px;
+
+border:none;
+
+}
+
+
+
+button{
+
+background:#a855f7;
+
+color:white;
+
+border:0;
+
+padding:12px 25px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+
+<h1>
+👑 NEXIO-A-world Admin
+</h1>
+
+
+<p>
+إضافة محتوى جديد
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+نوع المحتوى
+</h2>
+
+
+<select id="type">
+
+
+<option value="drama">
+🎬 مسلسل
+</option>
+
+
+<option value="group">
+🎤 فرقة
+</option>
+
+
+<option value="member">
+👤 عضو
+</option>
+
+
+<option value="news">
+📰 خبر
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+المعلومات
+</h2>
+
+
+<input id="name"
+placeholder="الاسم">
+
+
+<input id="country"
+placeholder="الدولة">
+
+
+<input id="company"
+placeholder="الشركة">
+
+
+<input id="image"
+placeholder="رابط الصورة">
+
+
+<input id="year"
+placeholder="السنة">
+
+
+<textarea id="description"
+placeholder="الوصف">
+
+</textarea>
+
+
+
+<button onclick="addContent()">
+
+🚀 إضافة
+
+</button>
+
+
+<p id="message"></p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script type="module" src="js/admin.js"></script>
+
+
+</body>
+
+</html>
 
 
 <div class="container">
