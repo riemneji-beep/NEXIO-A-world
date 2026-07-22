@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<title>My Planet 🌌</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+margin:0;
+color:white;
+min-height:100vh;
+
+background:
+radial-gradient(circle,#351064,#05000b);
+
+}
+
+
+header{
+
+padding:20px;
+
+background:rgba(255,255,255,.1);
+
+font-size:25px;
+
+text-align:center;
+
+}
+
+
+
+.container{
+
+padding:20px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:25px;
+
+margin:20px 0;
+
+backdrop-filter:blur(15px);
+
+text-align:center;
+
+}
+
+
+
+.planet{
+
+width:230px;
+
+height:230px;
+
+margin:20px auto;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle at 30% 30%,
+#ff8c42,
+#8b0000);
+
+box-shadow:
+
+0 0 60px orange;
+
+}
+
+
+
+.stats{
+
+display:flex;
+
+justify-content:space-around;
+
+}
+
+
+
+.item{
+
+background:rgba(255,255,255,.15);
+
+padding:15px;
+
+border-radius:20px;
+
+}
+
+
+
+button{
+
+padding:12px 20px;
+
+border:0;
+
+border-radius:25px;
+
+background:#a855f7;
+
+color:white;
+
+margin:5px;
+
+cursor:pointer;
+
+}
+
+
+
+.shop{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+}
+
+
+
+.product{
+
+background:rgba(255,255,255,.15);
+
+padding:15px;
+
+border-radius:20px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+🪐 كوكبي في EastVerse
+
+</header>
+
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+
+<div class="planet" id="planet">
+
+</div>
+
+
+<h2 id="name">
+🔴 كوكب المريخ
+</h2>
+
+
+<p>
+🔥 كوكب الشغف والطاقة
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+📊 التطور
+</h2>
+
+
+<div class="stats">
+
+
+<div class="item">
+⭐ المستوى
+<br>
+5
+</div>
+
+
+<div class="item">
+💎 الجواهر
+<br>
+350
+</div>
+
+
+<div class="item">
+🌟 الخبرة
+<br>
+600 XP
+</div>
+
+
+</div>
+
+
+<br>
+
+
+<button onclick="upgrade()">
+
+تطوير الكوكب 🚀
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+💎 متجر الكواكب
+</h2>
+
+
+
+<div class="shop">
+
+
+
+<div class="product">
+
+🌠 أمطار نجوم
+
+<br>
+
+100 💎
+
+<br>
+
+<button>
+شراء
+</button>
+
+</div>
+
+
+
+<div class="product">
+
+🪐 حلقات كوكب
+
+<br>
+
+300 💎
+
+<br>
+
+<button>
+شراء
+</button>
+
+</div>
+
+
+
+<div class="product">
+
+✨ تأثير ذهبي
+
+<br>
+
+500 💎
+
+<br>
+
+<button>
+شراء
+</button>
+
+</div>
+
+
+
+<div class="product">
+
+🌌 مجرة خاصة
+
+<br>
+
+1000 💎
+
+<br>
+
+<button>
+شراء
+</button>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🎨 الثيمات
+</h2>
+
+
+<button onclick="theme('purple')">
+💜 مجرة بنفسجية
+</button>
+
+
+<button onclick="theme('blue')">
+💙 محيط فضائي
+</button>
+
+
+<button onclick="theme('gold')">
+✨ إمبراطورية ذهبية
+</button>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+let level=5;
+
+
+
+function upgrade(){
+
+level++;
+
+alert(
+"🎉 تطور كوكبك إلى المستوى "+level
+);
+
+}
+
+
+
+
+function theme(color){
+
+
+if(color=="purple"){
+
+document.body.style.background=
+"radial-gradient(circle,#7026b5,#080014)";
+
+}
+
+
+
+if(color=="blue"){
+
+document.body.style.background=
+"radial-gradient(circle,#0066aa,#001020)";
+
+}
+
+
+
+if(color=="gold"){
+
+document.body.style.background=
+"radial-gradient(circle,#b8860b,#160b00)";
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
