@@ -254,4 +254,9 @@ document.getElementById("message")
 
 
 
-}
+}<option value="news">
+📰 خبر
+</option>
+<input id="title" placeholder="عنوان الخبر">
+
+<input id="category" placeholder="تصنيف الخبر">
