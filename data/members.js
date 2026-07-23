@@ -369,3 +369,113 @@ border-radius:20px;
 </body>
 
 </html>
+import { initializeApp }
+
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+
+import {
+
+getFirestore,
+
+doc,
+
+getDoc
+
+}
+
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+
+const firebaseConfig={
+
+
+apiKey:"ضع المفتاح هنا",
+
+authDomain:"ضع الدومين هنا",
+
+projectId:"NEXIO-A-world"
+
+
+};
+
+
+
+const app =
+initializeApp(firebaseConfig);
+
+
+
+const db =
+getFirestore(app);
+
+
+
+
+
+async function loadMember(){
+
+
+let id =
+localStorage.getItem("memberID");
+
+
+
+if(!id) return;
+
+
+
+let result =
+await getDoc(
+
+doc(db,"member",id)
+
+);
+
+
+
+if(result.exists()){
+
+
+let member =
+result.data();
+
+
+
+document.getElementById("image").src =
+member.image;
+
+
+document.getElementById("name").innerHTML =
+"👤 "+member.name;
+
+
+document.getElementById("group").innerHTML =
+"🎤 "+member.group;
+
+
+document.getElementById("position").innerHTML =
+"⭐ "+member.position;
+
+
+document.getElementById("birthday").innerHTML =
+"🎂 "+member.birthday;
+
+
+document.getElementById("nationality").innerHTML =
+"🌍 "+member.nationality;
+
+
+document.getElementById("description").innerHTML =
+member.description;
+
+
+}
+
+
+}
+
+
+
+loadMember();
