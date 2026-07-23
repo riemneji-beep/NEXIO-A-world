@@ -212,3 +212,160 @@ image:""
 }
 
 ];
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>NEXIO-A-world | Member</title>
+
+
+<style>
+
+body{
+
+margin:0;
+font-family:Arial;
+color:white;
+
+background:
+radial-gradient(circle,#40106b,#050008);
+
+}
+
+
+.container{
+
+max-width:700px;
+margin:auto;
+padding:20px;
+
+}
+
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:25px;
+
+margin-bottom:20px;
+
+}
+
+
+
+img{
+
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<img id="image">
+
+
+<h1 id="name"></h1>
+
+
+<p id="group"></p>
+
+
+<p id="position"></p>
+
+
+<p id="birthday"></p>
+
+
+<p id="nationality"></p>
+
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>
+📖 التقرير
+</h2>
+
+
+<p id="description">
+
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>
+💬 آراء المعجبين
+</h2>
+
+
+<div id="reviews">
+
+لا توجد آراء بعد
+
+</div>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>
+🤖 NEXIO AI
+</h2>
+
+
+<p>
+سيتم إنشاء تقرير AI عن العضو هنا.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script type="module" src="js/member-details.js"></script>
+
+
+</body>
+
+</html>
