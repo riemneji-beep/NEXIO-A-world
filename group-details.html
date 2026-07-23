@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>NEXIO-A-world | Group</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+margin:0;
+
+background:
+radial-gradient(circle,#3f126a,#050008);
+
+color:white;
+
+}
+
+.container{
+
+max-width:700px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:25px;
+
+margin-bottom:20px;
+
+backdrop-filter:blur(15px);
+
+}
+
+img{
+
+width:100%;
+
+height:280px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+}
+
+button{
+
+background:#a855f7;
+
+color:white;
+
+border:0;
+
+padding:12px 20px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+
+.member{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:#7b2cbf;
+
+border-radius:20px;
+
+margin:6px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<img id="image">
+
+<h1 id="name"></h1>
+
+<p id="company"></p>
+
+<p id="country"></p>
+
+<p id="year"></p>
+
+<p id="description"></p>
+
+<button>
+❤️ متابعة الفرقة
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>
+👥 الأعضاء
+</h2>
+
+<div id="members">
+
+لا يوجد أعضاء حالياً
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>
+💬 آراء الجمهور
+</h2>
+
+<div id="reviews">
+
+لا توجد مراجعات
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>
+🤖 NEXIO AI
+</h2>
+
+<p>
+
+سيظهر هنا تقرير AI عن الفرقة.
+
+</p>
+
+</div>
+
+</div>
+
+<script type="module" src="js/group-details.js"></script>
+
+</body>
+
+</html>
