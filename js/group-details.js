@@ -58,3 +58,98 @@ document.getElementById("description").innerHTML=group.description||"";
 }
 
 loadGroup();
+
+async function loadMembers(){
+
+let groupName =
+document.getElementById("name").innerHTML;
+
+
+let membersBox =
+document.getElementById("members");
+
+
+let result =
+await getDocs(
+collection(db,"member")
+);
+
+
+membersBox.innerHTML="";
+
+
+let found=false;
+
+
+result.forEach((doc)=>{
+
+
+let member =
+doc.data();
+
+
+if(member.group === groupName){
+
+
+found=true;
+
+
+membersBox.innerHTML += `
+
+<div class="member">
+
+<h3>
+👤 ${member.name}
+</h3>
+
+<p>
+${member.position}
+</p>
+
+<p>
+🌍 ${member.nationality}
+</p>
+
+
+<button onclick="openMember('${doc.id}')">
+
+عرض الملف
+
+</button>
+
+</div>
+
+`;
+
+}
+
+});
+
+
+
+if(!found){
+
+membersBox.innerHTML=
+"لا يوجد أعضاء مضافون بعد";
+
+}
+
+}
+
+
+
+window.openMember=function(id){
+
+localStorage.setItem(
+"memberID",
+id
+);
+
+
+window.location.href=
+"member-details.html";
+
+}
+
+
+loadMembers();
