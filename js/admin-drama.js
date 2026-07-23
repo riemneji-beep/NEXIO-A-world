@@ -94,7 +94,9 @@ document.getElementById("nationality").value;
 
 
 await addDoc(
+title:title,
 
+category:category,
 collection(db,"dramas"),
 
 {
@@ -247,16 +249,10 @@ createdAt:new Date()
 
 
 
-document.getElementById("message")
-.innerHTML=
-
-"✅ تمت إضافة المحتوى بنجاح";
+add content (let title =
+document.getElementById("title").value;
 
 
-
-}<option value="news">
-📰 خبر
-</option>
-<input id="title" placeholder="عنوان الخبر">
-
-<input id="category" placeholder="تصنيف الخبر">
+let category =
+document.getElementById("category").value;)
+  
