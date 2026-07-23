@@ -79,8 +79,17 @@ document.getElementById("poster").value;
 let story=
 document.getElementById("story").value;
 
+let group =
+document.getElementById("group").value;
 
+let position =
+document.getElementById("position").value;
 
+let birthday =
+document.getElementById("birthday").value;
+
+let nationality =
+document.getElementById("nationality").value;
 
 
 
@@ -136,7 +145,13 @@ collection,
 
 addDoc
 
-}
+group:group,
+
+position:position,
+
+birthday:birthday,
+
+nationality:nationality,}
 
 from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
